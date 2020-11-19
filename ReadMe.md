@@ -17,7 +17,8 @@ allure serve reporter
 
 #### Gets de tests Json
 
-````
+```
+
 import requests
 
 
@@ -52,4 +53,5 @@ def test_get_all_users_check_number_of_users_equals_10():
     response = requests.get("https://jsonplaceholder.typicode.com/users")
     response_body = response.json()
     assert len(response_body) == 10
-````
+
+```
