@@ -1,5 +1,4 @@
 from behave import *
-import requests
 
 from features.pages.get_endpoint_users import GetBody
 
