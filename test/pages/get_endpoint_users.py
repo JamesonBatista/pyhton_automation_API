@@ -2,7 +2,7 @@ import requests
 
 
 from Environment.environment import Environment
-from schemas.schemas_read import SchemaJsonValidation as schemas
+from schemas.schema_validation import SchemaJsonValidation as schemas
 
 
 class GetBody:

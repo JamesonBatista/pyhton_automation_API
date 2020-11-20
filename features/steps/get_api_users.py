@@ -1,6 +1,6 @@
 from behave import *
 
-from features.pages.get_endpoint_users import *
+from test.pages.get_endpoint_users import GetBody
 
 
 @given(u'seja acessado via GET a api de Usuarios')
