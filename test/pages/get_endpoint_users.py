@@ -1,7 +1,7 @@
 import requests
 
 
-from Environment.environment import Environment
+from Environment.environment import Environment as base
 from schemas.schema_validation import SchemaJsonValidation as schemas
 
 
@@ -9,7 +9,7 @@ class GetBody:
 
     def __init__(self):
         self.response = None
-        self.base_url = Environment().BASE_PATH
+        self.base_url = base().BASE_PATH
 
     def get_endpoint(self, endpoint):
         self.response = requests.get(self.base_url + endpoint)
