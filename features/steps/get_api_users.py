@@ -11,14 +11,14 @@ def step_impl(context):
 
 @when(u'for efetuado validacoes na API "{endpoint}"')
 def step_impl(context, endpoint):
-    page.get_endpoint(endpoint)
+    page.step_endpoint(endpoint)
 
 
 @when(u'for efetuado validacao de contrato')
 def step_impl(context):
-    page.validation_schema_json()
+    page.step_validation_schema_json()
 
 
 @then(u'devo gerar relatorios das validacoes')
 def step_impl(context):
-    page.validation_path_value()
+    page.step_validation_json_schema()
