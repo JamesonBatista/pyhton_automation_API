@@ -1,16 +1,15 @@
 class SchemaJsonValidation:
 
     def schema_path(self, name):
-        value_path = self.json()
-        assert (type(value_path[
-                         name])) == str, f"\nType the  ♥{value_path[name]}♥ is not type, is ***☻☻{type(value_path[name])}☻☻*** "
+        v = self.json()
+        assert (type(v[name])) == str, f"\nType the  ♥{v[name]}♥ is not type, is ***☻☻{type(v[name])}☻☻*** "
 
     def schema_validation_array(self, address, street):
         json = self.json()
-        value_path = json[address]
-        assert type(value_path) == dict, f"Type the ♥{value_path}♥ is not type, is ***☻☻{type(value_path)}☻☻***"
-        value_object = json[address][street]
-        assert type(value_object) == str, f"Type the ♥{value_object}♥ is not type, is ***☻☻{type(value_object)}☻☻*** "
+        v = json[address]
+        assert type(v) == dict, f"Type the ♥{v}♥ is not type, is ***☻☻{type(v)}☻☻***"
+        v = json[address][street]
+        assert type(v) == str, f"Type the ♥{v}♥ is not type, is ***☻☻{type(v)}☻☻*** "
 
 # type array
 # for address in response_value:

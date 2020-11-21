@@ -14,11 +14,11 @@ def step_impl(context, endpoint):
     page.step_endpoint(endpoint)
 
 
-@when(u'for efetuado validacao de contrato')
-def step_impl(context):
-    page.step_validation_schema_json("name")
+@when(u'for efetuado validacao de contrato campo "{name}"')
+def step_impl(context, name):
+    page.step_validation_schema_json(name)
 
 
-@then(u'devo gerar relatorios das validacoes')
-def step_impl(context):
-    page.step_validation_json_schema("address", "street")
+@then(u'devo gerar relatorios das validacoes "{address}" "{street}"')
+def step_impl(context, address, street):
+    page.step_validation_json_schema(address, street)

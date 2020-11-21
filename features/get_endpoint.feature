@@ -5,5 +5,5 @@ Feature: Efetuando GET no endpoint de usuarios
 
   Scenario: efetuando validacoes no retorno da API
     When for efetuado validacoes na API "users/1"
-    And  for efetuado validacao de contrato
-    Then devo gerar relatorios das validacoes
+    And  for efetuado validacao de contrato campo "name"
+    Then devo gerar relatorios das validacoes "address" "street"
