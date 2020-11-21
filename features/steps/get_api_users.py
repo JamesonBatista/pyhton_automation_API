@@ -16,9 +16,9 @@ def step_impl(context, endpoint):
 
 @when(u'for efetuado validacao de contrato')
 def step_impl(context):
-    page.step_validation_schema_json()
+    page.step_validation_schema_json("name")
 
 
 @then(u'devo gerar relatorios das validacoes')
 def step_impl(context):
-    page.step_validation_json_schema()
+    page.step_validation_json_schema("address", "street")
